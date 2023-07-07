@@ -1,5 +1,5 @@
 ### BootInstances
-A tool created using python for starting or stopping EC2 instances using the instance id. 
+A tool created using Python 3 for starting or stopping EC2 instances using the instance id. 
 
 ### How to use
 
