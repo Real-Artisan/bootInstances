@@ -19,4 +19,4 @@ Enter "start", "stop" or "q" as needed.
 This tool works for standalone instances, instances associated with autoscaling groups will just be replaced when stopped. I will be releasing a tool for that soon.
 
 ### Developer
-This tool was created by Daniel Pereowei Iwenya. <a href="mailto:iwenyadaniel@icloud.com">Contact Developer.</a>
+This tool was created by Daniel Pereowei Iwenya. <a href="mailto:iwenyadaniel12@gmail.com">Contact Developer.</a>
