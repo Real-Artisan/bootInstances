@@ -39,7 +39,7 @@ def interactive_cli():
         print("No EC2 instances found in the specified region.")
         return
 
-    instance_choices = [{'name': instance} for instance in instance_ids]
+    instance_choices = [instance for instance in instance_ids]
 
     questions = [
         inquirer.Checkbox('selected_instances', message="Select EC2 instances to start/stop:",
@@ -57,12 +57,14 @@ def interactive_cli():
     action = input("Enter 'start' to start selected instances, 'stop' to stop them, or 'q' to quit: ")
     if action == 'start':
         for selected_instance in selected_instances:
-            instance_id = selected_instance.split(" (")[1][:-1]  # Extracting the instance ID from the selection
-            start_ec2_instance(region, instance_id)
+            instance_id = str(selected_instance)  # Extracting the instance ID from the selection
+            x = instance_id.split(" (")[1][:-1]
+            start_ec2_instance(region, x)
     elif action == 'stop':
         for selected_instance in selected_instances:
-            instance_id = selected_instance.split(" (")[1][:-1]  # Extracting the instance ID from the selection
-            stop_ec2_instance(region, instance_id)
+            instance_id = str(selected_instance)  # Extracting the instance ID from the selection
+            x = instance_id.split(" (")[1][:-1]
+            stop_ec2_instance(region, x)
     elif action == 'q':
         print("Exiting the program...")
     else:
